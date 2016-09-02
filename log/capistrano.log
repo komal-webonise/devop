@@ -85,3 +85,481 @@ and the repository exists.
   INFO [2e9b2d2d] Running /usr/bin/env git clone --mirror git@github.com:komal-webonise/devop.git $HOME/deploy_to/app_name/repo on 127.0.0.1
  DEBUG [2e9b2d2d] Command: cd $HOME/deploy_to/app_name && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git clone --mirror git@github.com:komal-webonise/devop.git $HOME/deploy_to/app_name/repo )
  DEBUG [2e9b2d2d] 	Cloning into bare repository '/home/webonise/deploy_to/app_name/repo'...
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-02 21:31:49 +0530 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [9c62c323] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [9c62c323] Command: /usr/bin/env mkdir -p /tmp
+  INFO [9c62c323] Finished in 0.165 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-app_name-staging-webonise.sh 0.0%
+  INFO Uploading /tmp/git-ssh-app_name-staging-webonise.sh 100.0%
+  INFO [bae1c507] Running /usr/bin/env chmod 700 /tmp/git-ssh-app_name-staging-webonise.sh on 127.0.0.1
+ DEBUG [bae1c507] Command: /usr/bin/env chmod 700 /tmp/git-ssh-app_name-staging-webonise.sh
+  INFO [bae1c507] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [fcf423bd] Running /usr/bin/env git ls-remote --heads git@github.com:komal-webonise/devop.git on 127.0.0.1
+ DEBUG [fcf423bd] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git ls-remote --heads git@github.com:komal-webonise/devop.git )
+ DEBUG [fcf423bd] 	1a88069c267cdf73fd82dff747b5c26bdf2ae476	refs/heads/master
+  INFO [fcf423bd] Finished in 3.140 seconds with exit status 0 (successful).
+  INFO [70d96273] Running /usr/bin/env mkdir -p $HOME/deploy_to/app_name/shared $HOME/deploy_to/app_name/releases on 127.0.0.1
+ DEBUG [70d96273] Command: /usr/bin/env mkdir -p $HOME/deploy_to/app_name/shared $HOME/deploy_to/app_name/releases
+  INFO [70d96273] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [1b59e972] Running [ -f $HOME/deploy_to/app_name/current/REVISION ] on 127.0.0.1
+ DEBUG [1b59e972] Command: [ -f $HOME/deploy_to/app_name/current/REVISION ]
+ DEBUG [1b59e972] Finished in 0.005 seconds with exit status 1 (failed).
+ DEBUG [d8db22b9] Running [ -f $HOME/deploy_to/app_name/repo/HEAD ] on 127.0.0.1
+ DEBUG [d8db22b9] Command: [ -f $HOME/deploy_to/app_name/repo/HEAD ]
+ DEBUG [d8db22b9] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO The repository mirror is at $HOME/deploy_to/app_name/repo
+ DEBUG [0f028f54] Running if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [0f028f54] Command: if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi
+ DEBUG [0f028f54] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [55e0ca12] Running /usr/bin/env git remote update --prune on 127.0.0.1
+ DEBUG [55e0ca12] Command: cd $HOME/deploy_to/app_name/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [55e0ca12] 	Fetching origin
+ DEBUG [55e0ca12] 	From github.com:komal-webonise/devop
+   5e40b87..1a88069  master     -> master
+  INFO [55e0ca12] Finished in 3.457 seconds with exit status 0 (successful).
+ DEBUG [550ba909] Running if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [550ba909] Command: if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi
+ DEBUG [550ba909] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [94b4528f] Running /usr/bin/env mkdir -p $HOME/deploy_to/app_name/releases/20160902160153 on 127.0.0.1
+ DEBUG [94b4528f] Command: cd $HOME/deploy_to/app_name/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env mkdir -p $HOME/deploy_to/app_name/releases/20160902160153 )
+  INFO [94b4528f] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO [ebcfde90] Running /usr/bin/env git archive master | tar -x -f - -C $HOME/deploy_to/app_name/releases/20160902160153 on 127.0.0.1
+ DEBUG [ebcfde90] Command: cd $HOME/deploy_to/app_name/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git archive master | tar -x -f - -C $HOME/deploy_to/app_name/releases/20160902160153 )
+  INFO [ebcfde90] Finished in 0.161 seconds with exit status 0 (successful).
+ DEBUG [aa4244b8] Running if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [aa4244b8] Command: if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi
+ DEBUG [aa4244b8] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [4427f736] Running /usr/bin/env git rev-list --max-count=1 master on 127.0.0.1
+ DEBUG [4427f736] Command: cd $HOME/deploy_to/app_name/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [4427f736] 	1a88069c267cdf73fd82dff747b5c26bdf2ae476
+ DEBUG [4427f736] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [9457bff8] Running if test ! -d $HOME/deploy_to/app_name/releases/20160902160153; then echo "Directory does not exist '$HOME/deploy_to/app_name/releases/20160902160153'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [9457bff8] Command: if test ! -d $HOME/deploy_to/app_name/releases/20160902160153; then echo "Directory does not exist '$HOME/deploy_to/app_name/releases/20160902160153'" 1>&2; false; fi
+ DEBUG [9457bff8] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [96207957] Running /usr/bin/env echo "1a88069c267cdf73fd82dff747b5c26bdf2ae476" >> REVISION on 127.0.0.1
+ DEBUG [96207957] Command: cd $HOME/deploy_to/app_name/releases/20160902160153 && /usr/bin/env echo "1a88069c267cdf73fd82dff747b5c26bdf2ae476" >> REVISION
+  INFO [96207957] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [37471fb9] Running /usr/bin/env ln -s $HOME/deploy_to/app_name/releases/20160902160153 $HOME/deploy_to/app_name/releases/current on 127.0.0.1
+ DEBUG [37471fb9] Command: /usr/bin/env ln -s $HOME/deploy_to/app_name/releases/20160902160153 $HOME/deploy_to/app_name/releases/current
+  INFO [37471fb9] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [b88b3753] Running /usr/bin/env mv $HOME/deploy_to/app_name/releases/current $HOME/deploy_to/app_name on 127.0.0.1
+ DEBUG [b88b3753] Command: /usr/bin/env mv $HOME/deploy_to/app_name/releases/current $HOME/deploy_to/app_name
+  INFO [b88b3753] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [6793078e] Running cd $HOME/deploy_to/app_name/releases/20160902160153 && docker build -t app_name . on 127.0.0.1
+ DEBUG [6793078e] Command: cd $HOME/deploy_to/app_name/releases/20160902160153 && docker build -t app_name .
+ DEBUG [6793078e] 	Sending build context to Docker daemon 557.1 kB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 1.114 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 1.671 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 2.228 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 2.785 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 3.342 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 3.899 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 4.456 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 5.014 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 5.571 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 6.128 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 6.685 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 7.242 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 7.799 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 8.356 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 8.913 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon  9.47 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 10.03 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 10.58 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 11.14 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon  11.7 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 12.26 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 12.81 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 13.37 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 13.93 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 14.48 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 15.04 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon  15.6 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 16.15 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 16.71 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 17.27 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 17.83 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 18.38 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 18.94 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon  19.5 MB
+ DEBUG [6793078e] 	Sending build context to Docker daemon 19.82 MB
+ DEBUG [6793078e] 	Step 1 : FROM ubuntu:latest
+ DEBUG [6793078e] 	 ---> bd3d4369aebc
+ DEBUG [6793078e] 	Step 2 : MAINTAINER komal Lunkad "komal8332@gmail.com"
+ DEBUG [6793078e] 	 ---> Using cache
+ DEBUG [6793078e] 	 ---> 65eb6ec67dd6
+ DEBUG [6793078e] 	Step 3 : RUN apt-get update -y
+ DEBUG [6793078e] 	 ---> Using cache
+ DEBUG [6793078e] 	 ---> 4c0c08ee03bc
+ DEBUG [6793078e] 	Step 4 : RUN apt-get install -y python-pip python-dev build-essential
+ DEBUG [6793078e] 	 ---> Using cache
+ DEBUG [6793078e] 	 ---> f57a8abe279b
+ DEBUG [6793078e] 	Step 5 : COPY . /app
+ DEBUG [6793078e] 	 ---> 9bbd9d8d06ac
+ DEBUG [6793078e] 	Removing intermediate container 0f68afce089b
+Step 6 : WORKDIR /app
+ DEBUG [6793078e] 	 ---> Running in 8e9b879a231b
+ DEBUG [6793078e] 	 ---> b2ef9cf6d7e0
+ DEBUG [6793078e] 	Removing intermediate container 8e9b879a231b
+ DEBUG [6793078e] 	Step 7 : RUN pip install -r requirements.txt
+ DEBUG [6793078e] 	 ---> Running in f45fed6c98a5
+ DEBUG [6793078e] 	Collecting click==6.6 (from -r requirements.txt (line 1))
+ DEBUG [6793078e] 	  Downloading click-6.6.tar.gz (283kB)
+ DEBUG [6793078e] 	Collecting Flask==0.11.1 (from -r requirements.txt (line 2))
+ DEBUG [6793078e] 	  Downloading Flask-0.11.1-py2.py3-none-any.whl (80kB)
+ DEBUG [6793078e] 	Collecting itsdangerous==0.24 (from -r requirements.txt (line 3))
+ DEBUG [6793078e] 	  Downloading itsdangerous-0.24.tar.gz (46kB)
+ DEBUG [6793078e] 	Collecting Jinja2==2.8 (from -r requirements.txt (line 4))
+ DEBUG [6793078e] 	  Downloading Jinja2-2.8-py2.py3-none-any.whl (263kB)
+ DEBUG [6793078e] 	Collecting MarkupSafe==0.23 (from -r requirements.txt (line 5))
+ DEBUG [6793078e] 	  Downloading MarkupSafe-0.23.tar.gz
+ DEBUG [6793078e] 	Collecting pymongo==3.3.0 (from -r requirements.txt (line 6))
+ DEBUG [6793078e] 	  Downloading pymongo-3.3.0-cp27-cp27mu-manylinux1_x86_64.whl (339kB)
+ DEBUG [6793078e] 	Collecting Werkzeug==0.11.10 (from -r requirements.txt (line 7))
+ DEBUG [6793078e] 	  Downloading Werkzeug-0.11.10-py2.py3-none-any.whl (306kB)
+ DEBUG [6793078e] 	Building wheels for collected packages: click, itsdangerous, MarkupSafe
+ DEBUG [6793078e] 	  Running setup.py bdist_wheel for click: started
+ DEBUG [6793078e] 	  Running setup.py bdist_wheel for click: finished with status 'done'
+ DEBUG [6793078e] 	  Stored in directory: /root/.cache/pip/wheels/b0/6d/8c/cf5ca1146e48bc7914748bfb1dbf3a40a440b8b4f4f0d952dd
+ DEBUG [6793078e] 	  Running setup.py bdist_wheel for itsdangerous: started
+ DEBUG [6793078e] 	  Running setup.py bdist_wheel for itsdangerous: finished with status 'done'
+ DEBUG [6793078e] 	  Stored in directory: /root/.cache/pip/wheels/fc/a8/66/24d655233c757e178d45dea2de22a04c6d92766abfb741129a
+ DEBUG [6793078e] 	  Running setup.py bdist_wheel for MarkupSafe: started
+ DEBUG [6793078e] 	  Running setup.py bdist_wheel for MarkupSafe: finished with status 'done'
+ DEBUG [6793078e] 	  Stored in directory: /root/.cache/pip/wheels/a3/fa/dc/0198eed9ad95489b8a4f45d14dd5d2aee3f8984e46862c5748
+ DEBUG [6793078e] 	Successfully built click itsdangerous MarkupSafe
+ DEBUG [6793078e] 	Installing collected packages: click, itsdangerous, Werkzeug, MarkupSafe, Jinja2, Flask, pymongo
+ DEBUG [6793078e] 	Successfully installed Flask-0.11.1 Jinja2-2.8 MarkupSafe-0.23 Werkzeug-0.11.10 click-6.6 itsdangerous-0.24 pymongo-3.3.0
+ DEBUG [6793078e] 	[91mYou are using pip version 8.1.1, however version 8.1.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[0m
+ DEBUG [6793078e] 	 ---> a434149df63f
+ DEBUG [6793078e] 	Removing intermediate container f45fed6c98a5
+Step 8 : ENTRYPOINT python
+ DEBUG [6793078e] 	 ---> Running in 6c2797b16851
+ DEBUG [6793078e] 	 ---> c9056f059433
+ DEBUG [6793078e] 	Removing intermediate container 6c2797b16851
+Step 9 : CMD app.py
+ DEBUG [6793078e] 	 ---> Running in c640c52f4a0b
+ DEBUG [6793078e] 	 ---> 64fe0821dbe4
+ DEBUG [6793078e] 	Removing intermediate container c640c52f4a0b
+ DEBUG [6793078e] 	Successfully built 64fe0821dbe4
+  INFO [6793078e] Finished in 36.907 seconds with exit status 0 (successful).
+  INFO [82e9f77a] Running docker stop app_name; true on 127.0.0.1
+ DEBUG [82e9f77a] Command: docker stop app_name; true
+ DEBUG [82e9f77a] 	Error response from daemon: No such container: app_name
+  INFO [82e9f77a] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [3394c295] Running docker rm app_name; true on 127.0.0.1
+ DEBUG [3394c295] Command: docker rm app_name; true
+ DEBUG [3394c295] 	Error response from daemon: No such container: app_name
+  INFO [3394c295] Finished in 0.018 seconds with exit status 0 (successful).
+  INFO [095c2349] Running docker run --restart=always --name=app_name -tdP app_name on 127.0.0.1
+ DEBUG [095c2349] Command: docker run --restart=always --name=app_name -tdP app_name
+ DEBUG [095c2349] 	fd0d16460bfc62313bfb29e3532c3f546b41a3bc42ca7c75fb90b927b953000c
+  INFO [095c2349] Finished in 0.686 seconds with exit status 0 (successful).
+ DEBUG [9250a683] Running /usr/bin/env ls -xtr $HOME/deploy_to/app_name/releases on 127.0.0.1
+ DEBUG [9250a683] Command: /usr/bin/env ls -xtr $HOME/deploy_to/app_name/releases
+ DEBUG [9250a683] 	20160902160153
+ DEBUG [9250a683] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [b766eb88] Running if test ! -d $HOME/deploy_to/app_name/releases; then echo "Directory does not exist '$HOME/deploy_to/app_name/releases'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [b766eb88] Command: if test ! -d $HOME/deploy_to/app_name/releases; then echo "Directory does not exist '$HOME/deploy_to/app_name/releases'" 1>&2; false; fi
+ DEBUG [b766eb88] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [25c65cd2] Running /usr/bin/env echo "Branch master (at 1a88069c267cdf73fd82dff747b5c26bdf2ae476) deployed as release 20160902160153 by webonise" >> $HOME/deploy_to/app_name/revisions.log on 127.0.0.1
+ DEBUG [25c65cd2] Command: cd $HOME/deploy_to/app_name/releases && /usr/bin/env echo "Branch master (at 1a88069c267cdf73fd82dff747b5c26bdf2ae476) deployed as release 20160902160153 by webonise" >> $HOME/deploy_to/app_name/revisions.log
+  INFO [25c65cd2] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-02 21:34:28 +0530 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [33b8f4ba] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [33b8f4ba] Command: /usr/bin/env mkdir -p /tmp
+  INFO [33b8f4ba] Finished in 0.155 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-app_name-staging-webonise.sh 0.0%
+  INFO Uploading /tmp/git-ssh-app_name-staging-webonise.sh 100.0%
+  INFO [8f55e505] Running /usr/bin/env chmod 700 /tmp/git-ssh-app_name-staging-webonise.sh on 127.0.0.1
+ DEBUG [8f55e505] Command: /usr/bin/env chmod 700 /tmp/git-ssh-app_name-staging-webonise.sh
+  INFO [8f55e505] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [4ca9b322] Running /usr/bin/env git ls-remote --heads git@github.com:komal-webonise/devop.git on 127.0.0.1
+ DEBUG [4ca9b322] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git ls-remote --heads git@github.com:komal-webonise/devop.git )
+ DEBUG [4ca9b322] 	1a88069c267cdf73fd82dff747b5c26bdf2ae476	refs/heads/master
+  INFO [4ca9b322] Finished in 3.306 seconds with exit status 0 (successful).
+  INFO [537e12ce] Running /usr/bin/env mkdir -p $HOME/deploy_to/app_name/shared $HOME/deploy_to/app_name/releases on 127.0.0.1
+ DEBUG [537e12ce] Command: /usr/bin/env mkdir -p $HOME/deploy_to/app_name/shared $HOME/deploy_to/app_name/releases
+  INFO [537e12ce] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [1cdaf00a] Running [ -f $HOME/deploy_to/app_name/current/REVISION ] on 127.0.0.1
+ DEBUG [1cdaf00a] Command: [ -f $HOME/deploy_to/app_name/current/REVISION ]
+ DEBUG [1cdaf00a] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [16e7f8c2] Running /usr/bin/env cat $HOME/deploy_to/app_name/current/REVISION 2>/dev/null on 127.0.0.1
+ DEBUG [16e7f8c2] Command: /usr/bin/env cat $HOME/deploy_to/app_name/current/REVISION 2>/dev/null
+ DEBUG [16e7f8c2] 	1a88069c267cdf73fd82dff747b5c26bdf2ae476
+ DEBUG [16e7f8c2] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [62e0208a] Running [ -f $HOME/deploy_to/app_name/repo/HEAD ] on 127.0.0.1
+ DEBUG [62e0208a] Command: [ -f $HOME/deploy_to/app_name/repo/HEAD ]
+ DEBUG [62e0208a] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO The repository mirror is at $HOME/deploy_to/app_name/repo
+ DEBUG [49b9aabd] Running if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [49b9aabd] Command: if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi
+ DEBUG [49b9aabd] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [78e7de23] Running /usr/bin/env git remote update --prune on 127.0.0.1
+ DEBUG [78e7de23] Command: cd $HOME/deploy_to/app_name/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [78e7de23] 	Fetching origin
+  INFO [78e7de23] Finished in 3.406 seconds with exit status 0 (successful).
+ DEBUG [169c0a78] Running if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [169c0a78] Command: if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi
+ DEBUG [169c0a78] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [c555f8eb] Running /usr/bin/env mkdir -p $HOME/deploy_to/app_name/releases/20160902160432 on 127.0.0.1
+ DEBUG [c555f8eb] Command: cd $HOME/deploy_to/app_name/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env mkdir -p $HOME/deploy_to/app_name/releases/20160902160432 )
+  INFO [c555f8eb] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [7c8787ed] Running /usr/bin/env git archive master | tar -x -f - -C $HOME/deploy_to/app_name/releases/20160902160432 on 127.0.0.1
+ DEBUG [7c8787ed] Command: cd $HOME/deploy_to/app_name/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git archive master | tar -x -f - -C $HOME/deploy_to/app_name/releases/20160902160432 )
+  INFO [7c8787ed] Finished in 0.173 seconds with exit status 0 (successful).
+ DEBUG [a9d08837] Running if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [a9d08837] Command: if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi
+ DEBUG [a9d08837] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [9f0d24f9] Running /usr/bin/env git rev-list --max-count=1 master on 127.0.0.1
+ DEBUG [9f0d24f9] Command: cd $HOME/deploy_to/app_name/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [9f0d24f9] 	1a88069c267cdf73fd82dff747b5c26bdf2ae476
+ DEBUG [9f0d24f9] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [84acd097] Running if test ! -d $HOME/deploy_to/app_name/releases/20160902160432; then echo "Directory does not exist '$HOME/deploy_to/app_name/releases/20160902160432'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [84acd097] Command: if test ! -d $HOME/deploy_to/app_name/releases/20160902160432; then echo "Directory does not exist '$HOME/deploy_to/app_name/releases/20160902160432'" 1>&2; false; fi
+ DEBUG [84acd097] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [3bb210b2] Running /usr/bin/env echo "1a88069c267cdf73fd82dff747b5c26bdf2ae476" >> REVISION on 127.0.0.1
+ DEBUG [3bb210b2] Command: cd $HOME/deploy_to/app_name/releases/20160902160432 && /usr/bin/env echo "1a88069c267cdf73fd82dff747b5c26bdf2ae476" >> REVISION
+  INFO [3bb210b2] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [6afb38b6] Running /usr/bin/env ln -s $HOME/deploy_to/app_name/releases/20160902160432 $HOME/deploy_to/app_name/releases/current on 127.0.0.1
+ DEBUG [6afb38b6] Command: /usr/bin/env ln -s $HOME/deploy_to/app_name/releases/20160902160432 $HOME/deploy_to/app_name/releases/current
+  INFO [6afb38b6] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [84893e88] Running /usr/bin/env mv $HOME/deploy_to/app_name/releases/current $HOME/deploy_to/app_name on 127.0.0.1
+ DEBUG [84893e88] Command: /usr/bin/env mv $HOME/deploy_to/app_name/releases/current $HOME/deploy_to/app_name
+  INFO [84893e88] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [229e58cd] Running cd $HOME/deploy_to/app_name/releases/20160902160432 && docker build -t app_name . on 127.0.0.1
+ DEBUG [229e58cd] Command: cd $HOME/deploy_to/app_name/releases/20160902160432 && docker build -t app_name .
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 557.1 kB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 1.114 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 1.671 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 2.228 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 2.785 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 3.342 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 3.899 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 4.456 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 5.014 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 5.571 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 6.128 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 6.685 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 7.242 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 7.799 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 8.356 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 8.913 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon  9.47 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 10.03 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 10.58 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 11.14 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon  11.7 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 12.26 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 12.81 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 13.37 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 13.93 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 14.48 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 15.04 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon  15.6 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 16.15 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 16.71 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 17.27 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 17.83 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 18.38 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 18.94 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon  19.5 MB
+ DEBUG [229e58cd] 	Sending build context to Docker daemon 19.82 MB
+ DEBUG [229e58cd] 	Step 1 : FROM ubuntu:latest
+ DEBUG [229e58cd] 	 ---> bd3d4369aebc
+ DEBUG [229e58cd] 	Step 2 : MAINTAINER komal Lunkad "komal8332@gmail.com"
+ DEBUG [229e58cd] 	 ---> Using cache
+ DEBUG [229e58cd] 	 ---> 65eb6ec67dd6
+ DEBUG [229e58cd] 	Step 3 : RUN apt-get update -y
+ DEBUG [229e58cd] 	 ---> Using cache
+ DEBUG [229e58cd] 	 ---> 4c0c08ee03bc
+ DEBUG [229e58cd] 	Step 4 : RUN apt-get install -y python-pip python-dev build-essential
+ DEBUG [229e58cd] 	 ---> Using cache
+ DEBUG [229e58cd] 	 ---> f57a8abe279b
+ DEBUG [229e58cd] 	Step 5 : COPY . /app
+ DEBUG [229e58cd] 	 ---> Using cache
+ ---> 9bbd9d8d06ac
+ DEBUG [229e58cd] 	Step 6 : WORKDIR /app
+ DEBUG [229e58cd] 	 ---> Using cache
+ DEBUG [229e58cd] 	 ---> b2ef9cf6d7e0
+ DEBUG [229e58cd] 	Step 7 : RUN pip install -r requirements.txt
+ DEBUG [229e58cd] 	 ---> Using cache
+ DEBUG [229e58cd] 	 ---> a434149df63f
+ DEBUG [229e58cd] 	Step 8 : ENTRYPOINT python
+ DEBUG [229e58cd] 	 ---> Using cache
+ DEBUG [229e58cd] 	 ---> c9056f059433
+ DEBUG [229e58cd] 	Step 9 : CMD app.py
+ DEBUG [229e58cd] 	 ---> Using cache
+ DEBUG [229e58cd] 	 ---> 64fe0821dbe4
+ DEBUG [229e58cd] 	Successfully built 64fe0821dbe4
+  INFO [229e58cd] Finished in 0.510 seconds with exit status 0 (successful).
+  INFO [46cdf23d] Running docker stop app_name; true on 127.0.0.1
+ DEBUG [46cdf23d] Command: docker stop app_name; true
+ DEBUG [46cdf23d] 	app_name
+  INFO [46cdf23d] Finished in 0.462 seconds with exit status 0 (successful).
+  INFO [c04b5f07] Running docker rm app_name; true on 127.0.0.1
+ DEBUG [c04b5f07] Command: docker rm app_name; true
+ DEBUG [c04b5f07] 	app_name
+  INFO [c04b5f07] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [d80d6853] Running docker run --restart=always --name=app_name -td -p 5000:5000 app_name on 127.0.0.1
+ DEBUG [d80d6853] Command: docker run --restart=always --name=app_name -td -p 5000:5000 app_name
+ DEBUG [d80d6853] 	5fb623b658627c4c2525fcace5dada49f03029324c96c5411a8f4b861e7fe90c
+ DEBUG [d80d6853] 	docker: Error response from daemon: driver failed programming external connectivity on endpoint app_name (72a744bef84550aaaed0a73c13d09fb39c9d44455ee04455556d65251007f0f3): Bind for 0.0.0.0:5000 failed: port is already allocated.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-02 21:35:34 +0530 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [620b5faf] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [620b5faf] Command: /usr/bin/env mkdir -p /tmp
+  INFO [620b5faf] Finished in 0.157 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-app_name-staging-webonise.sh 0.0%
+  INFO Uploading /tmp/git-ssh-app_name-staging-webonise.sh 100.0%
+  INFO [22a48ea5] Running /usr/bin/env chmod 700 /tmp/git-ssh-app_name-staging-webonise.sh on 127.0.0.1
+ DEBUG [22a48ea5] Command: /usr/bin/env chmod 700 /tmp/git-ssh-app_name-staging-webonise.sh
+  INFO [22a48ea5] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [3022e716] Running /usr/bin/env git ls-remote --heads git@github.com:komal-webonise/devop.git on 127.0.0.1
+ DEBUG [3022e716] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git ls-remote --heads git@github.com:komal-webonise/devop.git )
+ DEBUG [3022e716] 	1a88069c267cdf73fd82dff747b5c26bdf2ae476	refs/heads/master
+  INFO [3022e716] Finished in 3.171 seconds with exit status 0 (successful).
+  INFO [a5f08a18] Running /usr/bin/env mkdir -p $HOME/deploy_to/app_name/shared $HOME/deploy_to/app_name/releases on 127.0.0.1
+ DEBUG [a5f08a18] Command: /usr/bin/env mkdir -p $HOME/deploy_to/app_name/shared $HOME/deploy_to/app_name/releases
+  INFO [a5f08a18] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [d78f4c25] Running [ -f $HOME/deploy_to/app_name/current/REVISION ] on 127.0.0.1
+ DEBUG [d78f4c25] Command: [ -f $HOME/deploy_to/app_name/current/REVISION ]
+ DEBUG [d78f4c25] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [53652f5e] Running /usr/bin/env cat $HOME/deploy_to/app_name/current/REVISION 2>/dev/null on 127.0.0.1
+ DEBUG [53652f5e] Command: /usr/bin/env cat $HOME/deploy_to/app_name/current/REVISION 2>/dev/null
+ DEBUG [53652f5e] 	1a88069c267cdf73fd82dff747b5c26bdf2ae476
+ DEBUG [53652f5e] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [a35cdf8c] Running [ -f $HOME/deploy_to/app_name/repo/HEAD ] on 127.0.0.1
+ DEBUG [a35cdf8c] Command: [ -f $HOME/deploy_to/app_name/repo/HEAD ]
+ DEBUG [a35cdf8c] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO The repository mirror is at $HOME/deploy_to/app_name/repo
+ DEBUG [6acfbb70] Running if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [6acfbb70] Command: if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi
+ DEBUG [6acfbb70] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [d917039b] Running /usr/bin/env git remote update --prune on 127.0.0.1
+ DEBUG [d917039b] Command: cd $HOME/deploy_to/app_name/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d917039b] 	Fetching origin
+  INFO [d917039b] Finished in 3.200 seconds with exit status 0 (successful).
+ DEBUG [fa2ee0ef] Running if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [fa2ee0ef] Command: if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi
+ DEBUG [fa2ee0ef] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [c6e81738] Running /usr/bin/env mkdir -p $HOME/deploy_to/app_name/releases/20160902160538 on 127.0.0.1
+ DEBUG [c6e81738] Command: cd $HOME/deploy_to/app_name/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env mkdir -p $HOME/deploy_to/app_name/releases/20160902160538 )
+  INFO [c6e81738] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [473c102b] Running /usr/bin/env git archive master | tar -x -f - -C $HOME/deploy_to/app_name/releases/20160902160538 on 127.0.0.1
+ DEBUG [473c102b] Command: cd $HOME/deploy_to/app_name/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git archive master | tar -x -f - -C $HOME/deploy_to/app_name/releases/20160902160538 )
+  INFO [473c102b] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [c9f5a567] Running if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [c9f5a567] Command: if test ! -d $HOME/deploy_to/app_name/repo; then echo "Directory does not exist '$HOME/deploy_to/app_name/repo'" 1>&2; false; fi
+ DEBUG [c9f5a567] Finished in 0.003 seconds with exit status 0 (successful).
+ DEBUG [8deb4f6e] Running /usr/bin/env git rev-list --max-count=1 master on 127.0.0.1
+ DEBUG [8deb4f6e] Command: cd $HOME/deploy_to/app_name/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [8deb4f6e] 	1a88069c267cdf73fd82dff747b5c26bdf2ae476
+ DEBUG [8deb4f6e] Finished in 0.006 seconds with exit status 0 (successful).
+ DEBUG [f5021560] Running if test ! -d $HOME/deploy_to/app_name/releases/20160902160538; then echo "Directory does not exist '$HOME/deploy_to/app_name/releases/20160902160538'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [f5021560] Command: if test ! -d $HOME/deploy_to/app_name/releases/20160902160538; then echo "Directory does not exist '$HOME/deploy_to/app_name/releases/20160902160538'" 1>&2; false; fi
+ DEBUG [f5021560] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [d83ce739] Running /usr/bin/env echo "1a88069c267cdf73fd82dff747b5c26bdf2ae476" >> REVISION on 127.0.0.1
+ DEBUG [d83ce739] Command: cd $HOME/deploy_to/app_name/releases/20160902160538 && /usr/bin/env echo "1a88069c267cdf73fd82dff747b5c26bdf2ae476" >> REVISION
+  INFO [d83ce739] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [443bf868] Running /usr/bin/env ln -s $HOME/deploy_to/app_name/releases/20160902160538 $HOME/deploy_to/app_name/releases/current on 127.0.0.1
+ DEBUG [443bf868] Command: /usr/bin/env ln -s $HOME/deploy_to/app_name/releases/20160902160538 $HOME/deploy_to/app_name/releases/current
+  INFO [443bf868] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [6c4c2b56] Running /usr/bin/env mv $HOME/deploy_to/app_name/releases/current $HOME/deploy_to/app_name on 127.0.0.1
+ DEBUG [6c4c2b56] Command: /usr/bin/env mv $HOME/deploy_to/app_name/releases/current $HOME/deploy_to/app_name
+  INFO [6c4c2b56] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [84630c2e] Running cd $HOME/deploy_to/app_name/releases/20160902160538 && docker build -t app_name . on 127.0.0.1
+ DEBUG [84630c2e] Command: cd $HOME/deploy_to/app_name/releases/20160902160538 && docker build -t app_name .
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 557.1 kB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 1.114 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 1.671 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 2.228 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 2.785 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 3.342 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 3.899 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 4.456 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 5.014 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 5.571 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 6.128 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 6.685 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 7.242 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 7.799 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 8.356 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 8.913 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon  9.47 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 10.03 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 10.58 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 11.14 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon  11.7 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 12.26 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 12.81 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 13.37 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 13.93 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 14.48 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 15.04 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon  15.6 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 16.15 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 16.71 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 17.27 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 17.83 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 18.38 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 18.94 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon  19.5 MB
+ DEBUG [84630c2e] 	Sending build context to Docker daemon 19.82 MB
+ DEBUG [84630c2e] 	Step 1 : FROM ubuntu:latest
+ DEBUG [84630c2e] 	 ---> bd3d4369aebc
+ DEBUG [84630c2e] 	Step 2 : MAINTAINER komal Lunkad "komal8332@gmail.com"
+ DEBUG [84630c2e] 	 ---> Using cache
+ DEBUG [84630c2e] 	 ---> 65eb6ec67dd6
+ DEBUG [84630c2e] 	Step 3 : RUN apt-get update -y
+ DEBUG [84630c2e] 	 ---> Using cache
+ DEBUG [84630c2e] 	 ---> 4c0c08ee03bc
+ DEBUG [84630c2e] 	Step 4 : RUN apt-get install -y python-pip python-dev build-essential
+ DEBUG [84630c2e] 	 ---> Using cache
+ DEBUG [84630c2e] 	 ---> f57a8abe279b
+ DEBUG [84630c2e] 	Step 5 : COPY . /app
+ DEBUG [84630c2e] 	 ---> Using cache
+ ---> 9bbd9d8d06ac
+ DEBUG [84630c2e] 	Step 6 : WORKDIR /app
+ DEBUG [84630c2e] 	 ---> Using cache
+ DEBUG [84630c2e] 	 ---> b2ef9cf6d7e0
+ DEBUG [84630c2e] 	Step 7 : RUN pip install -r requirements.txt
+ DEBUG [84630c2e] 	 ---> Using cache
+ DEBUG [84630c2e] 	 ---> a434149df63f
+ DEBUG [84630c2e] 	Step 8 : ENTRYPOINT python
+ DEBUG [84630c2e] 	 ---> Using cache
+ DEBUG [84630c2e] 	 ---> c9056f059433
+ DEBUG [84630c2e] 	Step 9 : CMD app.py
+ DEBUG [84630c2e] 	 ---> Using cache
+ DEBUG [84630c2e] 	 ---> 64fe0821dbe4
+ DEBUG [84630c2e] 	Successfully built 64fe0821dbe4
+  INFO [84630c2e] Finished in 0.641 seconds with exit status 0 (successful).
+  INFO [9d815096] Running docker stop app_name; true on 127.0.0.1
+ DEBUG [9d815096] Command: docker stop app_name; true
+ DEBUG [9d815096] 	app_name
+  INFO [9d815096] Finished in 0.020 seconds with exit status 0 (successful).
+  INFO [0f4289ec] Running docker rm app_name; true on 127.0.0.1
+ DEBUG [0f4289ec] Command: docker rm app_name; true
+ DEBUG [0f4289ec] 	app_name
+  INFO [0f4289ec] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO [fbe9bd70] Running docker run --restart=always --name=app_name -td -p 5000:5000 app_name on 127.0.0.1
+ DEBUG [fbe9bd70] Command: docker run --restart=always --name=app_name -td -p 5000:5000 app_name
+ DEBUG [fbe9bd70] 	7c6774b94a3714440f39b43b65124542898c34cc002d1b394d73596c3986597b
+  INFO [fbe9bd70] Finished in 0.671 seconds with exit status 0 (successful).
+ DEBUG [13cd4da0] Running /usr/bin/env ls -xtr $HOME/deploy_to/app_name/releases on 127.0.0.1
+ DEBUG [13cd4da0] Command: /usr/bin/env ls -xtr $HOME/deploy_to/app_name/releases
+ DEBUG [13cd4da0] 	20160902160153	20160902160432	20160902160538
+ DEBUG [13cd4da0] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [0bc08cb9] Running if test ! -d $HOME/deploy_to/app_name/releases; then echo "Directory does not exist '$HOME/deploy_to/app_name/releases'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [0bc08cb9] Command: if test ! -d $HOME/deploy_to/app_name/releases; then echo "Directory does not exist '$HOME/deploy_to/app_name/releases'" 1>&2; false; fi
+ DEBUG [0bc08cb9] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [b28d2f3f] Running /usr/bin/env echo "Branch master (at 1a88069c267cdf73fd82dff747b5c26bdf2ae476) deployed as release 20160902160538 by webonise" >> $HOME/deploy_to/app_name/revisions.log on 127.0.0.1
+ DEBUG [b28d2f3f] Command: cd $HOME/deploy_to/app_name/releases && /usr/bin/env echo "Branch master (at 1a88069c267cdf73fd82dff747b5c26bdf2ae476) deployed as release 20160902160538 by webonise" >> $HOME/deploy_to/app_name/revisions.log
+  INFO [b28d2f3f] Finished in 0.004 seconds with exit status 0 (successful).

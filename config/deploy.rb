@@ -48,7 +48,7 @@ namespace :deploy do
 		on roles(:app) do
 			execute "docker stop #{fetch(:application)}; true"
 			execute "docker rm #{fetch(:application)}; true"	
-			execute "docker run --restart=always --name=#{fetch(:application )} -tdP #{fetch(:application)}"
+			execute "docker run --restart=always --name=#{fetch(:application )} -td -p 5000:5000 #{fetch(:application)}"
 		end
 	end
 
