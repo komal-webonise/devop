@@ -1,8 +1,9 @@
 # config valid only for current version of Capistrano
 lock '3.6.1'
 
-set :application, 'my_app_name'
-set :repo_url, 'git@example.com:me/my_repo.git'
+set :application, 'app_name'
+set :repo_url, 'git@github.com:komal-webonise/devop.git'
+set :deploy_to, "$HOME/deploy_to/#{fetch(:application)}"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -34,3 +35,23 @@ set :repo_url, 'git@example.com:me/my_repo.git'
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+namespace :deploy do
+	desc "Build Docker Images"
+	task :docker_build do
+		on roles(:app) do
+			execute "cd #{release_path} && docker build -t #{fetch(:application)} ."
+		end
+	end
+
+	desc "Restart Container"
+	task :docker_restart do
+		on roles(:app) do
+			execute "docker stop #{fetch(:application)}; true"
+			execute "docker rm #{fetch(:application)}; true"	
+			execute "docker run --restart=always --name=#{fetch(:application )} -tdP #{fetch(:application)}"
+		end
+	end
+
+	after:publishing, 'deploy:docker_build'
+	after:publishing, 'deploy:docker_restart'
+end

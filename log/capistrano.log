@@ -1,0 +1,87 @@
+# Logfile created on 2016-09-02 21:22:19 +0530 by logger.rb/54362
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-02 21:22:19 +0530 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [8cc32b13] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [8cc32b13] Command: /usr/bin/env mkdir -p /tmp
+  INFO [8cc32b13] Finished in 0.180 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-app_name-staging-webonise.sh 0.0%
+  INFO Uploading /tmp/git-ssh-app_name-staging-webonise.sh 100.0%
+  INFO [be6b54be] Running /usr/bin/env chmod 700 /tmp/git-ssh-app_name-staging-webonise.sh on 127.0.0.1
+ DEBUG [be6b54be] Command: /usr/bin/env chmod 700 /tmp/git-ssh-app_name-staging-webonise.sh
+  INFO [be6b54be] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [3a87b87f] Running /usr/bin/env git ls-remote --heads git@github.com:komal-webonise/devop.git on 127.0.0.1
+ DEBUG [3a87b87f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git ls-remote --heads git@github.com:komal-webonise/devop.git )
+ DEBUG [3a87b87f] 	Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+ DEBUG [3a87b87f] 	Permission denied (publickey).
+ DEBUG [3a87b87f] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-02 21:24:16 +0530 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [477159c4] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [477159c4] Command: /usr/bin/env mkdir -p /tmp
+  INFO [477159c4] Finished in 0.171 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-app_name-staging-webonise.sh 0.0%
+  INFO Uploading /tmp/git-ssh-app_name-staging-webonise.sh 100.0%
+  INFO [8ca04c2d] Running /usr/bin/env chmod 700 /tmp/git-ssh-app_name-staging-webonise.sh on 127.0.0.1
+ DEBUG [8ca04c2d] Command: /usr/bin/env chmod 700 /tmp/git-ssh-app_name-staging-webonise.sh
+  INFO [8ca04c2d] Finished in 0.007 seconds with exit status 0 (successful).
+  INFO [b6614731] Running /usr/bin/env git ls-remote --heads git@github.com:komal-webonise/devop.git on 127.0.0.1
+ DEBUG [b6614731] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git ls-remote --heads git@github.com:komal-webonise/devop.git )
+ DEBUG [b6614731] 	Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
+ DEBUG [b6614731] 	Permission denied (publickey).
+ DEBUG [b6614731] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-02 21:26:06 +0530 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [b2bc64b7] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [b2bc64b7] Command: /usr/bin/env mkdir -p /tmp
+  INFO [b2bc64b7] Finished in 0.168 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-app_name-staging-webonise.sh 0.0%
+  INFO Uploading /tmp/git-ssh-app_name-staging-webonise.sh 100.0%
+  INFO [0509c875] Running /usr/bin/env chmod 700 /tmp/git-ssh-app_name-staging-webonise.sh on 127.0.0.1
+ DEBUG [0509c875] Command: /usr/bin/env chmod 700 /tmp/git-ssh-app_name-staging-webonise.sh
+  INFO [0509c875] Finished in 0.006 seconds with exit status 0 (successful).
+  INFO [23b43465] Running /usr/bin/env git ls-remote --heads git@github.com:komal-webonise/devop.git on 127.0.0.1
+ DEBUG [23b43465] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git ls-remote --heads git@github.com:komal-webonise/devop.git )
+ DEBUG [23b43465] 	Permission denied (publickey).
+ DEBUG [23b43465] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-02 21:27:49 +0530 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [ca21f22f] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [ca21f22f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [ca21f22f] Finished in 0.166 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-app_name-staging-webonise.sh 0.0%
+  INFO Uploading /tmp/git-ssh-app_name-staging-webonise.sh 100.0%
+  INFO [c722d29e] Running /usr/bin/env chmod 700 /tmp/git-ssh-app_name-staging-webonise.sh on 127.0.0.1
+ DEBUG [c722d29e] Command: /usr/bin/env chmod 700 /tmp/git-ssh-app_name-staging-webonise.sh
+  INFO [c722d29e] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [775ea534] Running /usr/bin/env git ls-remote --heads git@github.com:komal-webonise/devop.git on 127.0.0.1
+ DEBUG [775ea534] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git ls-remote --heads git@github.com:komal-webonise/devop.git )
+ DEBUG [775ea534] 	5e40b874a623127a031db5ea2bcfe98a0dfe6a1b	refs/heads/master
+  INFO [775ea534] Finished in 3.242 seconds with exit status 0 (successful).
+  INFO [3afe01cb] Running /usr/bin/env mkdir -p $HOME/deploy_to/app_name/shared $HOME/deploy_to/app_name/releases on 127.0.0.1
+ DEBUG [3afe01cb] Command: /usr/bin/env mkdir -p $HOME/deploy_to/app_name/shared $HOME/deploy_to/app_name/releases
+  INFO [3afe01cb] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [0b7286f4] Running [ -f $HOME/deploy_to/app_name/current/REVISION ] on 127.0.0.1
+ DEBUG [0b7286f4] Command: [ -f $HOME/deploy_to/app_name/current/REVISION ]
+ DEBUG [0b7286f4] Finished in 0.006 seconds with exit status 1 (failed).
+ DEBUG [503afba8] Running [ -f $HOME/deploy_to/app_name/repo/HEAD ] on 127.0.0.1
+ DEBUG [503afba8] Command: [ -f $HOME/deploy_to/app_name/repo/HEAD ]
+ DEBUG [503afba8] Finished in 0.006 seconds with exit status 1 (failed).
+ DEBUG [f80615f1] Running if test ! -d $HOME/deploy_to/app_name; then echo "Directory does not exist '$HOME/deploy_to/app_name'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [f80615f1] Command: if test ! -d $HOME/deploy_to/app_name; then echo "Directory does not exist '$HOME/deploy_to/app_name'" 1>&2; false; fi
+ DEBUG [f80615f1] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [2e9b2d2d] Running /usr/bin/env git clone --mirror git@github.com:komal-webonise/devop.git $HOME/deploy_to/app_name/repo on 127.0.0.1
+ DEBUG [2e9b2d2d] Command: cd $HOME/deploy_to/app_name && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_name-staging-webonise.sh" ; /usr/bin/env git clone --mirror git@github.com:komal-webonise/devop.git $HOME/deploy_to/app_name/repo )
+ DEBUG [2e9b2d2d] 	Cloning into bare repository '/home/webonise/deploy_to/app_name/repo'...
