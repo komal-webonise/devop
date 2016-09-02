@@ -1,0 +1,6 @@
+/var/log/boot.log {
+    size=500k
+    rotate 2
+    create 700 root root
+}
+

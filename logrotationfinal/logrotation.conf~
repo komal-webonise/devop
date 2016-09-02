@@ -1,0 +1,9 @@
+/home/webonise/myflaskproject/logr/logfile.log {
+    size 4k
+    rotate 2
+    dateext
+  
+    create 700 root root
+   
+}
+

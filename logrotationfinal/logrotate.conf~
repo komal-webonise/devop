@@ -1,0 +1,9 @@
+/home/myflaskproject/logr/logfile {
+    size 4k
+    rotate 2
+    dateext
+    create 700 webonise webonise
+   
+}
+#command to run : logrotate -s logrotation.conf
+
